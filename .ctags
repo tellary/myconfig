@@ -1,0 +1,4 @@
+--regex-javascript=/(var[ \t]*|this\.)([a-zA-Z0-9_]+).*curry/\2/curried functions/
+--regex-javascript=/(var[ \t]*|this\.)([a-zA-Z0-9_]+).*denodeify/\2/denodeified functions/
+--regex-javascript=/(var[ \t]*|this\.)([a-zA-Z0-9_]+).*compose/\2/composed functions/
+--regex-javascript=/var[ \t]+([a-zA-Z0-9_]+)[ \t]+=[ \t]+\{/\1/global structures/
