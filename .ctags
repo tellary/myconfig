@@ -2,3 +2,12 @@
 --regex-javascript=/(var[ \t]*|this\.)([a-zA-Z0-9_]+).*denodeify/\2/denodeified functions/
 --regex-javascript=/(var[ \t]*|this\.)([a-zA-Z0-9_]+).*compose/\2/composed functions/
 --regex-javascript=/var[ \t]+([a-zA-Z0-9_]+)[ \t]+=[ \t]+\{/\1/global structures/
+
+--langdef=groovy
+--langmap=groovy:.groovy
+--regex-groovy=/^[ \t]*((private|public|protected|static)[ \t]+)*[A-Za-z0-9_<>]+[ \t]+([A-Za-z0-9_]+)[ \t]*\(/\3/f,function,functions/
+--regex-groovy=/^[ \t]*def[ \t]+([A-Za-z0-9_]+)[ \t]*=[ \t]*\{/\1/f,function,functions/
+--regex-groovy=/^[ \t]*private def[ \t]+([A-Za-z0-9_]+)[ \t]*/\1/v,private,private variables/
+--regex-groovy=/^[ \t]*def[ t]+([A-Za-z0-9_]+)[ \t]*/\1/u,public,public variables/
+--regex-groovy=/^[ \t]*(abstract[ \t]+)*((private|public)[ \t])*class[ t]+([A-Za-z0-9_]+)[ t]*/\4/c,class,classes/
+--regex-groovy=/^[ \t]*(abstract[ \t]+)*((private|public)[ \t])*enum[ t]+([A-Za-z0-9_]+)[ t]*/\4/c,class,classes/
