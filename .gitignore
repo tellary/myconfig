@@ -1,4 +1,4 @@
-/.idea
+.idea/
 *.iml
 *.ipr
 *.pyc
@@ -6,3 +6,4 @@ TAGS
 *~
 \#*#
 \.#*
+.gradle/
