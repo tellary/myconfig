@@ -12,3 +12,15 @@
 --regex-groovy=/^[ \t]*(abstract[ \t]+)*((private|public)[ \t])*class[ t]+([A-Za-z0-9_]+)[ t]*/\4/c,class,classes/
 --regex-groovy=/^[ \t]*(abstract[ \t]+)*((private|public)[ \t])*enum[ t]+([A-Za-z0-9_]+)[ t]*/\4/c,class,classes/
 --regex-groovy=/^[ \t]*((private|public)[ \t])*interface[ t]+([A-Za-z0-9_]+)[ t]*/\3/c,class,classes/
+
+--langdef=Scala
+--langmap=Scala:.scala
+--regex-Scala=/^[^\*\/]*class[ \t]*([a-zA-Z0-9_]+)/\1/c,classes/
+--regex-Scala=/^[^\*\/]*object[ \t]*([a-zA-Z0-9_]+)/\1/o,objects/
+--regex-scala=/^[^\*\/]*trait[ \t]*([a-zA-Z0-9_]+)/\1/t,traits/
+--regex-Scala=/^[^\*\/]*case[ \t]*class[ \t]*([a-zA-Z0-9_]+)/\1/m,case-classes/
+--regex-Scala=/^[^\*\/]*abstract[ \t]*class[ \t]*([a-zA-Z0-9_]+)/\1/a,abstract-classes/
+--regex-Scala=/^[^\*\/]*def[ \t]*([a-zA-Z0-9_]+)[ \t]*.*[:=]/\1/f,functions/
+--regex-Scala=/^[^\*\/]*val[ \t]*([a-zA-Z0-9_]+)[ \t]*[:=]/\1/V,values/
+--regex-Scala=/^[^\*\/]*var[ \t]*([a-zA-Z0-9_]+)[ \t]*[:=]/\1/v,variables/
+--regex-Scala=/^[^\*\/]*type[ \t]*([a-zA-Z0-9_]+)[ \t]*[\[<>=]/\1/T,types/
