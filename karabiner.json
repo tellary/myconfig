@@ -1,0 +1,114 @@
+{
+    "profiles": [
+        {
+            "name": "Default profile",
+            "selected": true,
+            "complex_modifications": {
+                "rules": [
+                    {
+                        "description": "Tab switch with Command+{/}",
+                        "manipulators": [
+                            {
+                                "description": "Command+Shift+} to Ctrl+Tab",
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "equal_sign",
+                                    "modifiers": {
+                                        "mandatory": ["command", "shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["control"]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "description": "Command+Shift+} to Ctrl+Tab",
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "hyphen",
+                                    "modifiers": {
+                                        "mandatory": ["command", "shift"]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "tab",
+                                        "modifiers": ["control", "shift"]
+                                    }
+                                ],
+                                "conditions": [
+                                    {
+                                        "type": "frontmost_application_if",
+                                        "bundle_identifiers": [
+                                            "^com\\.google\\.Chrome$"
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": false,
+                        "product_id": 1031,
+                        "vendor_id": 4176
+                    },
+                    "ignore": false,
+                    "simple_modifications": {
+                        "quote": "q",
+                        "comma": "w",
+                        "period": "e",
+                        "p": "r",
+                        "y": "t",
+                        "f": "y",
+                        "g": "u",
+                        "c": "i",
+                        "r": "o",
+                        "l": "p",
+                        "slash": "open_bracket",
+                        "equal_sign": "close_bracket",
+                        "backslash": "backslash",
+                        "a": "a",
+                        "o": "s",
+                        "e": "d",
+                        "u": "f",
+                        "i": "g",
+                        "d": "h",
+                        "h": "j",
+                        "t": "k",
+                        "n": "l",
+                        "s": "semicolon",
+                        "hyphen": "quote",
+                        "semicolon": "z",
+                        "q": "x",
+                        "j": "c",
+                        "k": "v",
+                        "x": "b",
+                        "b": "n",
+                        "m": "m",
+                        "w": "comma",
+                        "v": "period",
+                        "z": "slash",
+                        "open_bracket": "hyphen",
+                        "close_bracket": "equal_sign" 
+                    }
+                }
+            ]
+        }
+    ]
+}
